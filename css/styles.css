@@ -1,0 +1,58 @@
+/*@import url('https://fonts.googleapis.com/css?family=Unbounded');*
+/*SASS https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@60f23eb56d1b4eacace9c2f7c291b31b/block-v1:Skillfactory+FR+2020+type@vertical+block@d4daed27e5ac4f88a3d55cff7035cc47*
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');/*СКОПИРОВАЛ С ГУГЛ ФОНТС ТАКОЙ КОД ДЛЯ SCSS https://www.youtube.com/watch?v=GwA0BN5RgB0&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=100*
+
+@import url('index.css');
+
+::-webkit-scrollbar {
+width:.1px;
+height:5px;
+pacity:.02
+}
+
+::-webkit-scrollbar-button {
+height:50px;
+background:#42e10e
+}
+
+::-webkit-scrollbar-track {
+background:#274dd7
+}
+
+::-webkit-scrollbar-track-piece {
+background:#e91e63
+}
+
+::-webkit-scrollbar-thumb {
+background:#fbe100;
+border-radius:10px;
+-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3)
+}
+
+/*html, body {это в этом проекте писать может и не нужно
+  width: 100%;
+  height: 100;
+  }*/
+
+/*html {
+  min-width: 1280px;
+  /*box-sizing: border-box;это в этом проекте писать может и не нужно*
+  scroll-behavior: smooth;
+  transition: transform 5000ms ease-in-out;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Gilroy-ExtraBold', 'Gilroy-Light', 'Unboumded-Regular', sans-serif;
+  ont-weight: 700;
+  ackground-color: black; /*для неона*
+  opacity:0; transition:.5s;/*добавляем для плавного переключения страниц
+}
+*/
+
+/*Блокернул, потому что все стили перенёс в бэйс.сцсс, чтобы через работать через Коалу
+и в голове прописал путь не styles.css ,а к base.css, потомучто base.scc поддерживает base.css*/

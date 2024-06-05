@@ -1,0 +1,465 @@
+@charset "UTF-8";
+/*@import url('https://fonts.googleapis.com/css?family=Unbounded');*/
+/*SASS https://apps.skillfactory.ru/learning/course/course-v1:Skillfactory+FR+2020/block-v1:Skillfactory+FR+2020+type@sequential+block@60f23eb56d1b4eacace9c2f7c291b31b/block-v1:Skillfactory+FR+2020+type@vertical+block@d4daed27e5ac4f88a3d55cff7035cc47*/
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+/*СКОПИРОВАЛ С ГУГЛ ФОНТС ТАКОЙ КОД ДЛЯ SCSS https://www.youtube.com/watch?v=GwA0BN5RgB0&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=100*/
+@import url("index.css");
+::-webkit-scrollbar {
+  width: .1px;
+  height: 5px;
+  pacity: 0.02; }
+
+::-webkit-scrollbar-button {
+  height: 50px;
+  background: #42e10e; }
+
+::-webkit-scrollbar-track {
+  background: #274dd7; }
+
+::-webkit-scrollbar-track-piece {
+  background: #e91e63; }
+
+::-webkit-scrollbar-thumb {
+  background: #fbe100;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+* {
+  /*https://www.youtube.com/watch?v=AvMusILfIdQ&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=2*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*
+  padding: 0;
+  margin: 0;
+  outline: solid re;/*удобно проверять лишнюю ширину и ввысоту у элементов*/ }
+
+section {
+  margin: 50px 0; }
+
+.container {
+  max-width: 1460px;
+  margin: 0 auto; }
+
+/*От 0 до 1 https://www.youtube.com/watch?v=AvMusILfIdQ&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=2*/
+/*html, body { 
+  idth: 100%;
+  min-height: 100%;
+  } */
+html {
+  min-width: 1300p;
+  /*box-sizing: border-box;это в этом проекте писать может и не нужно*/
+  scroll-behavior: smooth;
+  -webkit-transition: -webkit-transform 5000ms ease-in-out;
+  transition: -webkit-transform 5000ms ease-in-out;
+  transition: transform 5000ms ease-in-out;
+  transition: transform 5000ms ease-in-out, -webkit-transform 5000ms ease-in-out; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Inter-VariableFont_slnt,wght',  Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  ackground: linear-gradient(180.12deg, #5883fd 46%, #FFC700 9%);
+  ackground: linear-gradient(93.12deg, #F92D2D 0%, #FFC700 100%);
+  ackground: linear-gradient(#533720, rgba(69, 25, 25, 0));
+  ackground: linear-gradient(180deg, #F3CE0D 0%, rgba(255, 153, 0, 0.38) 92.71%, rgba(255, 184, 0, 0.37) 99.99%, rgba(255, 255, 255, 0) 100%);
+  ackground-image: linear-gradient(to bottom right, white, gray);
+  /*https://www.w3schools.com/css/css3_gradients.asp*/
+  ackground-image: linear-gradient(168deg, white, #242423);
+  ackground-image: linear-gradient(white, gray);
+  ackground-image: linear-gradient(0deg, #000000 56.0999751091%, rgba(255, 255, 255, 0.200000003) 100%);
+  ackground-image: linear-gradient(0deg, #e8e8e8 56.0999751091%, rgba(255, 255, 255, 0.200000003) 100%);
+  /*ВЗЯЛ ЛИНАР ДЛЯ ТЕКСТА И В ПЕРЕДИ ВМЕСТО TO RIGHT ПОСТАВИЛ 0DEG. ОТЛИЧНО*/
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#353535), color-stop(silver), color-stop(white), color-stop(white), to(white));
+  background-image: linear-gradient(0deg, #353535, silver, white, white, white);
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  /*добавляем для плавного переключения страниц*/ }
+
+wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  gap: 50px; }
+
+.header-container-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  lign-items: center;
+  margin-top: 30px; }
+
+/*.main {
+  flex-grow: 1;
+} НУЖНО ВКЛЮЧИТЬ ЕСЛИ ЕСТЬ WRAPPER 
+*/
+.section-container-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px; }
+
+.content-paragraph-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px; }
+
+.title-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px; }
+
+.title {
+  margin: 0;
+  /*учили в Скиллфэктори свойсва текста отделять пробелом от других свойств*/
+  font-family: 'Alice', sans-serif;
+  font-size: 4em;
+  /*64px это 4em, 4rem если размер текста не указан в боди или штмл, тогда берется стандартный размер 16 пикселей 64px / 16px = 4rem,4em*/
+  line-height: 4rem;
+  /*1em = 64px, то есть размеру текста, а 4rem = 64px А.Блок про em,rem,vh https://www.youtube.com/watch?v=dPzoBD2Z68A*/
+  ine-height: calc(16vh / 4);
+                             /*Растягивает текст на всю высоту контейнера, 
+регулировать нужно 16vh*/
+  letter-spacing: 0.06em;
+  /*0.06em это 6% в фигма*/
+  -webkit-text-stroke: 2px #000000;
+  ext-stroke: 2.5px #000000;
+  /*НЕ РАБОТАЕТ*/
+  ext-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  ext-shadow: 2px 2px 0 black;
+  /*РАБОТАЕТ*/
+  color: #000000; }
+
+.description {
+  margin: 0;
+  font-size: 1.5em;
+  /*24px, 20px будет 1.25em*/
+  color: #000000; }
+
+.block-img-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px; }
+
+/*A Sokirco https://www.youtube.com/watch?v=VaVpUHUM8JU&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=89*/
+/*Можно прописать фотку так и не комментировать её в теге пикчуре в штмл,
+но в этом случае контейнер пикчуре больше фотo и это видно*/
+.filter-img-1 {
+  loat: left;
+  /*так я делал в новогодних поздравленьях малому*/
+  width: 100%;
+  height: auto;
+  /*так я делал в новогодних поздравленьях малому чтобы фото заполнило весь контейнер*/
+  eight: 720px;
+  /*если сделать фиксированную высоту, то фото при изменении размеров экрана не сужается и не расширяется автоматически*/
+  ackground-image: url(../images/image-2.png);
+  /*отключено, потому что в штмл прописал*/
+  ackground-position: center center;
+  ackground-size: cover;
+  background-color: #505050;
+  border-radius: 30p; }
+
+.img-1 {
+  display: block;
+  /*c display: block, object-fit: cover не нужен инфа из чата*/
+  /*max-width:100%; так у Сокирко, при width: 1460px; height: 730px;*/
+  width: 100%;
+  /*так я делал в новогодних поздравленьях малому*/
+  height: 100%;
+  /*так я делал в новогодних поздравленьях малому. отзывчивая вёрстка, когда % */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /*так у Сокирко, при width: 1460px; height: 730px;*/
+  /*object-position: 50% 50%;так у Сокирко, при width: 1460px; height: 730px;*/
+  bject-fit: fill; }
+
+/*Можно прописать фотку так, в этом случае фотка тянется по размерам контейнера
+ пикчур, но в штмл, в теге пикчуре фотку закомментировал*/
+filter-img-1 {
+  /*picture https://www.w3schools.com/tags/tag_picture.asp*/
+  width: 100%;
+  height: 720px;
+  ackground-color: #505050;
+  background-image: url(../images/image-13.png);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 30p; }
+
+.paragraph {
+  margin: 0;
+  text-align: justify;
+  color: black;
+  /*такие свойства нужны тексту если нужно сверху или слева сделать чёрным,
+  а снизу или справа белым*/
+  background-image: -webkit-gradient(linear, left top, right top, from(black), color-stop(black), color-stop(black), color-stop(black), to(black));
+  background-image: linear-gradient(to right, black, black, black, black, black);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  ackground-image: linear-gradient(to bottom right, red, blue);
+  ackground-image: linear-gradient(to right, black, white);
+  /*такие свойства нужны тексту если нужно сверху или слева сделать чёрным,
+  а снизу или справа белым*/
+  ackground: linear-gradient(180deg, #272727 0%, rgba(39, 39, 39, 0) 100%);
+  webkit-background-clip: text;
+  webkit-text-fill-color: transparent; }
+
+.content-paragraph-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px; }
+
+.filter-img-2 {
+  width: 100%;
+  height: auto;
+  /*для того, чтобы фото заполнили контейнер на всю высоту, как на стр фото в слайдереу малого в новогоднем поздравлении*/
+  eight: 720px;
+  margin: 0;
+  ackground-image: url(../images/image-4.png);
+  background-position: center center;
+  background-color: #6c6c6c;
+  border-radius: 30p; }
+
+.img-2 {
+  display: block;
+  /*c display: block, object-fit: cover не нужен инфа из чата*/
+  /*max-width:100%; так у Сокирко, при width: 1460px; height: 730px;*/
+  width: 100%;
+  /*так я делал в новогодних поздравленьях малому*/
+  height: 100%;
+  /*так я делал в новогодних поздравленьях малому*/
+  bject-fit: cover;
+  /*так у Сокирко, при width: 1460px; height: 730px;*/
+  /*object-position: 50% 50%;так у Сокирко, при width: 1460px; height: 730px;*/ }
+
+.paragraphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 15px; }
+
+.filter-img-3 {
+  width: 100%;
+  height: auto;
+  /*для того, чтобы фото заполнили контейнер на всю высоту, как на стр фото в слайдереу малого в новогоднем поздравлении*/
+  eight: 720px;
+  margin: 0;
+  ackground-image: url(../images/image-3.png);
+  ackground-position: center center;
+  background: border-box;
+  background-color: #6c6c6c;
+  border-radius: 30p; }
+
+.img-3 {
+  display: block;
+  /*c display: block, object-fit: cover не нужен*/
+  /*max-width:100%; так у Сокирко, при width: 1460px; height: 730px;*/
+  width: 100%;
+  /*так я делал в новогодних поздравленьях малому*/
+  height: 100%;
+  /*так я делал в новогодних поздравленьях малому*/
+  bject-fit: cover;
+  /*так у Сокирко, при width: 1460px; height: 730px;*/
+  /*object-position: 50% 50%;так у Сокирко, при width: 1460px; height: 730px;*/ }
+
+.footer .footer-container-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 30px 0; }
+  .footer .footer-container-content > .paragraph-footer {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out; }
+  .footer .footer-container-content > .paragraph-footer-2:hover {
+    color: yellow;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+    cursor: pointer; }
+
+/*закрыл, потому что добавил в уровень вложенности
+footer-container-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+paragraph-footer {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color:$color-pj-two;
+  transition: color 300ms ease-in-out;
+}
+paragraph-footer-2 {
+
+  &:hover {
+    color: $color-hover-paragraph-footer-2;
+  transition: color 300ms ease-in-out;
+  cursor: pointer;
+  }
+
+}
+paragraph-footer-2:hover {
+  color: $color-hover-paragraph-footer-2;
+  transition: color 300ms ease-in-out;
+  cursor: pointer;
+}
+*/
+/* Responsive */
+@media screen and (max-width: 1300px) {
+  .container {
+    max-width: 1200px; } }
+/* Large: 992px - 1199px*/
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px; } }
+/* Medium: 768px - 991px*/
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px; }
+
+  .title {
+    font-size: 3em; }
+
+  .description {
+    text-align: center; } }
+@media screen and (max-width: 800px) {
+  html {
+    min-width: 889p; } }
+@media screen and (max-width: 768px) {
+  html {
+    min-width: 889p; }
+
+  .continer {
+    max-width: 720px; } }
+/* Small: 576px - 767px*/
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px; }
+
+  .title {
+    font-size: 2em; }
+
+  .description {
+    text-align: center; } }
+/* Extra small: 0px (320px) - 575px*/
+@media (max-width: 575px) {
+  .container {
+    padding: 0 15px; }
+
+  .title {
+    font-size: 30px;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: 0.1em;
+    -webkit-text-stroke: 1px #000000; }
+
+  .description {
+    text-align: center; }
+
+  .paragraph {
+    text-align: center;
+    letter-spacing: 0.1rem; }
+
+  .paragraph-footer {
+    text-align: center; }
+
+  .paragraph-footer-2 {
+    padding: 0 0 0 160px; } }
+@media screen and (max-width: 425px) {
+  html {
+    min-width: 891p; } }
+@media screen and (max-width: 375px) {
+  .continer {
+    max-width: 320px; }
+
+  .paragraph-footer-2 {
+    padding: 0 0 0 75px; } }
+
+/*# sourceMappingURL=base.css.map */
